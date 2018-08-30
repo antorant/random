@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <title>Random Link</title>
+<style type="text/css">
+html, body, button {
+  font-family: monospace;
+  font-size: 100%;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 32rem;
+  height: auto;
+  margin: 0 auto;
+}
+
+#container > * {
+  margin: 2em 0;
+}
+
+#link {
+  font-size: 2rem;
+}
+
+#button {
+  cursor: pointer;
+  padding: 1em;
+  border: 1px dashed;
+}
+
+#button:focus {
+  outline: none;
+}
+
+#button:hover {
+  border-style: solid;
+}
+
+
+</style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="heading">A random thing related to randomness:</div>
+      <a href="" id="link"></a>
+      <button id="button" onclick="randomLink()">New link</button>
+    </div>
+<script>
+var list = [
+  { title: "Chance In Art", url: "https://www.dartmouth.edu/~chance/course/student_projects/Kristin/Kristin.html" },
+  { title: "Dada and Chance", url: "https://arthistoryunstuffed.com/dada-and-chance/" },
+  { title: "The Controlled Chaos of Creativity", url: "https://blogs.scientificamerican.com/beautiful-minds/the-controlled-chaos-of-creativity/" },
+  { title: "The Geneplore Model", url: "http://www.redchurch.com/quantum/2006/10/24/the-geneplore-model/" },
+  { title: "The Value of Randomness in Art and Design", url: "https://www.fastcompany.com/3052333/the-value-of-randomness-in-art-and-design" },
+  { title: "CreativeAI", url: "http://www.creativeai.net/" },
+  { title: "Indeterminacy (music)", url: "https://en.wikipedia.org/wiki/Indeterminacy_(music)" },
+  { title: "Geneplore Model", url: "https://creativityepsy5750.wordpress.com/geneplore-model/" },
+  { title: "Creative Chaos: A Matter of Perception", url: "http://enchantedmind.com/html/science/creative_chaos.html" },
+];
+
+function randomLink(){
+  var max = list.length - 1;
+  var min = 0;
+
+  var random = Math.round( Math.random() * (max - min) + min );
+  console.log(random);
+  console.log(random, list[random]['title'], list[random]['url'] );
+  document.getElementById("link").innerHTML = list[random]['title'];
+  document.getElementById("link").href = list[random]['url'];
+}
+
+randomLink();
+</script>
+  </body>
+</html>
