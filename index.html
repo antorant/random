@@ -70,6 +70,28 @@ var list = [
   { title: "Indeterminacy (music)", url: "https://en.wikipedia.org/wiki/Indeterminacy_(music)" },
   { title: "Geneplore Model", url: "https://creativityepsy5750.wordpress.com/geneplore-model/" },
   { title: "Creative Chaos: A Matter of Perception", url: "http://enchantedmind.com/html/science/creative_chaos.html" },
+  { title: "Generative Art", url: "https://en.wikipedia.org/wiki/Generative_art" },
+  { title: "Chaos Can Help Creativity", url: "https://www.iedp.com/articles/chaos-can-help-creativity/" },
+  { title: "What a Mess: Chaos and Creativity", url: "https://www.huffingtonpost.com/wray-herbert/what-a-mess-chaos-and-cre_b_2726060.html" },
+  { title: "Algorithm-Driven Design: How Artificial Intelligence Is Changing Design", url: "https://www.smashingmagazine.com/2017/01/algorithm-driven-design-how-artificial-intelligence-changing-design/"},
+  { title: "Applications Of Machine Learning For Designers", url: "https://www.smashingmagazine.com/2017/04/applications-machine-learning-designers/" },
+  { title: "Machine Learning for Designers", url: "https://www.oreilly.com/learning/machine-learning-for-designers" },
+  { title: "Thoughts on the generative creative economy", url: "https://samim.io/p/2018-04-19-find-it-comedic-how-professional-digital-creative-tools/" },
+  { title: "Creative AI: On the Democratisation & Escalation of Creativity", url: "https://medium.com/@creativeai/creativeai-9d4b2346faf3" },
+  { title: "Thoughts on Botnets and Creativity", url: "https://samim.io/p/2018-04-23-the-solution-to-exploding-fake-news-and-spam-botnets-ca/" },
+  { title: "Glass/Machine: Listening to the Technology of Philip Glass", url: "https://culturexchange1.wordpress.com/2017/12/27/glass-machine-listening-to-the-technology-of-philip-glass/" },
+  { title: "RANDOMNESS and DESIGN: RANDOMLY GENERATED SYSTEMS OF VISUAL IDENTITY", url: "https://www.researchgate.net/publication/301441104_RANDOMNESS_and_DESIGN_RANDOMLY_GENERATED_SYSTEMS_OF_VISUAL_IDENTITY" },
+  { title: "Charles Ives, Musical Inventor", url: "https://www.nytimes.com/1974/10/20/archives/charles-ives-musical-inventor-musicthe-music-of-ives-goes-both.html" },
+  { title: "A guide to Pierre Boulez's music", url: "https://www.theguardian.com/music/tomserviceblog/2012/jul/16/pierre-boulez-contemporary-music-guide" },
+  { title: "Morton Feldman: God is boring already", url: "https://www.limelightmagazine.com.au/features/morton-feldman-god-is-boring-already/" },
+  { title: "Experience Design in the Machine Learning Era", url: "https://medium.com/@girardin/experience-design-in-the-machine-learning-era-e16c87f4f2e2" },
+  { title: "Generative Music - Brian Eno", url: "http://www.inmotionmagazine.com/eno1.html" },
+  { title: "A.I Astrology", url: "https://medium.com/@samim/a-i-astrology-804cbec95968" },
+  { title: "A guide to Terry Riley's music", url: "https://www.theguardian.com/music/tomserviceblog/2013/jan/28/terry-riley-contemporary-music-guide" },
+  { title: "How Randomness Rules Our World and Why We Cannot See It", url: "https://www.scientificamerican.com/article/how-randomness-rules-our-world/" },
+  { title: "Aleatoric music", url: "https://en.wikipedia.org/wiki/Aleatoric_music" },
+  { title: "Algorithmic composition", url: "https://en.wikipedia.org/wiki/Algorithmic_composition" },
+  { title: "Graphic music scores - in pictures", url: "https://www.theguardian.com/music/gallery/2013/oct/04/graphic-music-scores-in-pictures" }
 ];
 
 function randomLink(){
@@ -77,8 +99,6 @@ function randomLink(){
   var min = 0;
 
   var random = Math.round( Math.random() * (max - min) + min );
-  console.log(random);
-  console.log(random, list[random]['title'], list[random]['url'] );
   document.getElementById("link").innerHTML = list[random]['title'];
   document.getElementById("link").href = list[random]['url'];
 }
